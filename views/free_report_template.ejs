@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <style class="shared-css" type="text/css">
+        @page {
+            size: A4;
+            margin: 0in 0in 0in 0in;
+        }
+
+        * {
+            font-family: "Roboto", Arial, Helvetica, sans-serif;
+            line-height: 1.4;
+            box-sizing: border-box;
+        }
+
+        .pg1 {
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+
+        .pg2,
+        .pg3,
+        .pg4,
+        .pg5,
+        .pg6,
+        .pg7,
+        .pg8,
+        .pg9,
+        .pg10,
+        .pg11 {
+            height: 1200px;
+        }
+
+        .logo {
+            position: fixed;
+            top: 10px;
+            margin-left: 40%;
+            height: 60px;
+        }
+
+        .content {
+            margin-top: 10%;
+            height: 980px;
+        }
+
+        .footer {
+            position: fixed;
+            width: 100%;
+            height: 60px;
+            bottom: 0;
+        }
+
+        .blue-strip {
+            color: #ffffff;
+            background-color: #180E37;
+            text-align: center;
+        }
+
+        .main-container {
+            margin: auto;
+        }
+
+        .flex-container {
+            display: flex;
+            text-align: center;
+        }
+
+        .flex-child {
+            flex: 1;
+            min-height: 100px;
+        }
+
+        .flex-child:first-child {
+            /* margin-right: 20px; */
+            margin-right: 0px;
+        }
+
+        .image1 {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            border: 1px red solid;
+            z-index: 2;
+        }
+
+        .image2 {
+            position: absolute;
+            top: 400px;
+            left: 300px;
+            border: 1px green solid;
+            z-index: 2;
+        }
+
+        li {
+            text-align: left;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .column {
+            flex: 33.33%;
+            padding: 5px;
+        }
+
+        p {
+            font-size: 18px
+        }
+
+        .mrgn {
+            margin-left: 2%;
+            margin-right: 2%;
+            margin-top: -1em;
+        }
+
+        li {
+            font-size: 18px
+        }
+
+        .li-mrgn {
+            margin-top: -1em;
+            text-indent: 2em;
+        }
+
+        .mrgn2 {
+            margin-left: 2%;
+            margin-right: 2%;
+            margin-bottom: 2em;
+        }
+
+        .mrgn3 {
+            margin-left: 2%;
+            margin-right: 2%;
+            margin-top: 0.5em;
+        }
+
+        .only-mrgn {
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+
+        .centre-align-text {
+            text-align: center;
+        }
+
+        .centre-align-text ul li {
+            display: inline;
+        }
+
+        .flex-container-2 {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .flex-child-2 {
+            text-align: center;
+            line-height: 75px;
+            font-size: 18px;
+        }
+
+        .mrgn4 {
+            margin-left: 2%;
+            margin-right: 2%;
+            margin-top: -0.5em;
+        }
+
+        div.ul-container {
+            text-align: center;
+        }
+
+        ul.myUL {
+            display: inline-block;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="pg1">
+            <img class="image1" src="/public/img/home-1.png" />
+            <img class="image2" src="/public/img/logo.png" />
+            <div style="font-weight: bold; font-size: 23px; position: absolute;top: 500px; left: 205px;z-index: 2;">
+                Name:
+            </div>
+            <div style="font-weight: bold; font-size: 23px; position: absolute;top: 500px; left: 305px;z-index: 2;">
+                <%= data.name %>
+            </div>
+            <div style="font-weight: bold; font-size: 23px; position: absolute;top: 540px; left: 205px;z-index: 2;">Age:
+            </div>
+            <div style="font-weight: bold; font-size: 23px; position: absolute;top: 540px; left: 305px;z-index: 2;">
+                <%= data.age %>
+            </div>
+            <div style="font-weight: bold; font-size: 23px; position: absolute;top: 580px; left: 205px;z-index: 2;">
+                Email:
+            </div>
+            <div style="font-weight: bold; font-size: 23px; position: absolute;top: 580px; left: 305px;z-index: 2;">
+                <%= data.email %>
+            </div>
+            <div style="font-weight: bold; font-size: 23px; position: absolute;top: 620px; left: 205px;z-index: 2;">
+                Mobile:
+            </div>
+            <div style="font-weight: bold; font-size: 23px; position: absolute;top: 620px; left: 305px;z-index: 2;">
+                <%= data.phone %>
+            </div>
+            <div style="font-weight: bold; font-size: 23px; position: absolute;top: 660px; left: 205px;z-index: 2;">
+                Dated:
+            </div>
+            <div style="font-weight: bold; font-size: 23px; position: absolute;top: 660px; left: 305px;z-index: 2;">
+                <%= data.recording_date %>
+            </div>
+            <div
+                style="font-size: 18px; font-weight: 600; position: absolute;top: 720px; width: 100%; text-align: center; z-index: 2;">
+                Homebased Smart Health Diagnosis
+            </div>
+            <div
+                style="font-size: 18px; font-weight: 600; position: absolute;top: 750px; width: 100%; text-align: center; z-index: 2;">
+                Mobile Phone App. The Report is Auto
+            </div>
+            <div
+                style="font-size: 18px; font-weight: 600; position: absolute;top: 780px; width: 100%; text-align: center; z-index: 2;">
+                generated after Analyzing your
+            </div>
+            <div
+                style="font-size: 18px; font-weight: 600; position: absolute;top: 810px; width: 100%; text-align: center; z-index: 2;">
+                Recorded Voice.
+            </div>
+            <br>
+        </div>
+
+
+        <div class="pg2">
+            <div class="logo">
+                <span>
+                    <img src="/public/img/logo.png" />
+                </span>
+            </div>
+            <br>
+            <div class="content">
+                <div class="blue-strip">
+                    <span>
+                        <h2><b>Your Health Analysis Report</b></h2><br>
+                        <p class="mrgn">This Report gives you Access to the Parameters listed below.</p>
+                    </span>
+                </div>
+                <div style="text-align: center;">
+                    <img style="width: 600px;height: 880px;margin-top: 0.5em" src="/public/img/index1.png">
+                </div>
+            </div>
+            <div class="footer">
+                <span>
+                    <img style="width: 100%; height: 60px; object-fit: cover; overflow: visible;"
+                        src="/public/img/footer.jpg" />
+                </span>
+            </div>
+        </div>
+
+        <div class="pg3">
+            <br>
+            <div class="content">
+                <div class="blue-strip">
+                    <span>
+                        <h2 style="margin-bottom: 5px;"><b>Your Health Analysis Report</b></h2><br>
+                        <p class="mrgn" style="font-size: 15px;">Our Doctors have Researched for over 7 years to Develop
+                            an AI-Enabled App that
+                            scans
+                            full body in 30 seconds and provides analysis on health issues by Measuring your Body
+                            Vibrations through a Voice Sample.</p>
+                    </span>
+                </div>
+                <br>
+                <div class="flex-container">
+
+                    <div class="
+          flex-child" style="flex: 0 0 100px;">
+                        <img src="/public/img/ri_9.png" />
+                    </div>
+                    <div class="flex-child">
+                        <p class="only-mrgn">
+                            Like a fingerprint, a person's voice is unique, created only by
+                            them based on the frequencies emanating from the Body and
+                            the Mind
+                        </p>
+                        <p class="only-mrgn">
+                            For the first time in the history of medical science, the
+                            application of Voice Analysis is being channeled holistically by
+                            <b> Jv-Scan</b> in the field of <b>Preventive diagnostics</b> and <b>Digital
+                                Home based Health </b>using Artificial Intelligence in compliance
+                            with <b>W.H.O Guidelines</b>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex-container">
+
+                    <div class="flex-child" style="flex-basis: 230px;">
+                        <p class="only-mrgn" style="font-weight: 300; margin: 0;">
+                            <b>Human Voice</b> is a Holographic Representation of not only your
+                            Personality Traits but also a few <b>Biomarkers of Ill Health</b>
+                            When you record your voice over the App for 30 seconds, the <b>AI
+                                Platform</b> Measures the Vibrational Frequencies of Body in the First
+                            Step & <b>compares these working frequencies</b> with the Actual or
+                            Normal frequencies of the Body to come to a Conclusion and report
+                            Generation @the click of a button.
+                        </p>
+                    </div>
+
+                    <div class="flex-child" style="margin-top: -30px;">
+                        <img src="/public/img/ri_10.png" />
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <h2 style="margin-bottom: 0; margin-top: 0;">HOW DOES IT WORK?</h2>
+                </div>
+                <div>
+                    <p style="margin-bottom: 15px;">
+                        When you record your voice over the App for <b>30 seconds</b>, the <b>AI Platform</b> Measures
+                        the Vibrational Frequencies in the <b>First Step</b>, which are the working vibrations of:</p>
+                    <ol>
+                        <li>Each and every Emotion & Thought of the Subconscious mind</li>
+                        <li>Blood Elements</li>
+                        <li>Each and Every cell and Organ</li>
+                        <li>Each and Every System in the Body.</li>
+                    </ol>
+                    <p style="margin: 0;">
+                        <b>In the Second Step</b>, the AI Platform/Algorithm, compares these working frequencies
+                        with the Actual or Normal frequencies of each listed above to come to a Conclusion and
+                        report Generation @the click of a button.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="pg4">
+            <br>
+            <div class="content">
+                <div class="blue-strip">
+                    <span>
+                        <h2 style="margin-bottom: 5px;"><b>Your Health Analysis Report</b></h2><br>
+                        <p class="mrgn" style="font-size: 15px;">Our Doctors have Researched for over 7 years to Develop
+                            an AI-Enabled App that
+                            scans
+                            full body in 30 seconds and provides analysis on health issues by Measuring your Body
+                            Vibrations through a Voice Sample.</p>
+                    </span>
+                </div>
+                <div style="text-align: center;">
+                    <span>
+                        <h3 style="font-size: 24px;">WHAT ARE BODY FREQUENCIES?</h3>
+                    </span>
+                </div>
+                <div class="flex-container">
+
+                    <div class="flex-child">
+                        <br>
+                        <p style="flex-basis: 110px;">
+                            Every <b>cell, organ or a system</b> in the Human
+                            body is resonating or vibrating at a value
+                            which we name as the <b>working frequency</b>
+                            for that particular cell, or an organ and is
+                            measured in <b>Hertz.</b>
+                        </p>
+                        <p style="margin-top: 10px;">
+                            All the cells and Organs Vibrate to perform
+                            their respective functions in the Human Body.
+                        </p>
+                    </div>
+
+                    <div class="flex-child">
+                        <span>
+                            <img src="/public/img/heart.png" />
+                        </span>
+                    </div>
+
+                </div>
+
+                <div>
+                    <p class="only-mrgn"><b>There are four types of Frequencies encountered during Voice Analysis:</b>
+                    </p>
+                </div>
+
+                <div class="flex-container">
+
+                    <div class="flex-child">
+                        <span>
+                            <img style="width:90%" src="/public/img/freq.jpg" />
+                        </span>
+                    </div>
+
+                    <div class="flex-child">
+                        <div>
+                            <p class="only-mrgn" style="text-align: left;">
+                                <b>Normal frequencies:</b> at which an organ
+                                vibrates: <b>The working Frequency</b>
+                                <br><br>
+                                <b>Weak frequencies:</b> Means that the Organ
+                                frequency is low and it is under-performing in
+                                the Body and may be at future risk
+                                <br><br>
+                                <b>Missing frequencies:</b> Means that the Organ has
+                                stopped its Normal functioning
+                                <br><br>
+                                <b>Hyperactive frequencies:</b> Means the Working
+                                Frequency of a particular organ is higher than
+                                normal, and it may be compensating for the
+                                missing frequency of another organ/System
+                                connected to it
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="pg5">
+            <br>
+            <div class="content">
+                <div class="blue-strip">
+                    <span>
+                        <h2><b>Your Health Analysis Report Summary</b></h2><br>
+                        <p class="mrgn">Know your overall Health score and an overview of Health vitals.</p>
+                    </span>
+                </div>
+                <div style="text-align: center;">
+                    <span>
+                        <p style="margin-right: 20%;margin-left: 20%">
+                            <b>Well Done!</b> Your report is successfully generated.
+                        </p>
+                        <p class="mrgn" style="margin-right: 20%;margin-left: 20%">Keep track of your health by
+                            identifying areas
+                            for improvement and stay ahead of it.</p>
+                        </p>
+                    </span>
+                    <span>
+                        <div style="width: 500px;display: inline-block;">
+                            <div style="background-color: #ebebeb;padding: 1px;width: 100%;">
+                                <p class="only-mrgn">
+                                <h3>YOUR OVERALL BODY FREQUENCY MAPPING</h3>
+                                </p>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <div style="text-align: center;">
+                    <span>
+                        <img style="height: 50%;width: 50%;" src="/public/img/man_standing.png" />
+                    </span>
+                </div>
+                <br>
+                <div style="text-align: center;">
+                    <p style="margin-right: 15%;margin-left: 15%">
+                        Dear <b>
+                            <%= data.name %>
+                        </b> based on the assessment of your Body Vibrations, out of a total of 72 body frequencies
+                        mapped by <b>Dhvani</b>, you display:
+                        <br>
+                    <p class="only-mrgn"><b>Missing Frequencies:</b>
+                        <%= data.missing_fq_count %>
+                    </p>
+                    <p class="only-mrgn"><b>Weak Frequencies:</b>
+                        <%= data.weak_fq_count %>
+                    </p>
+                    <p class="only-mrgn"><b>Hyperactive Frequencies:</b>
+                        <%= data.hyper_fq_count %>
+                    </p>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="pg6">
+            <br>
+            <div class="content">
+                <div style="text-align: center;">
+                    <span>
+                        <div style="width: 500px;display: inline-block;">
+                            <div style="background-color: #ebebeb;padding: 1px;width: 100%;">
+                                <p class="only-mrgn">
+                                <h3>MENTAL HEALTH MAPPING</h3>
+                                </p>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <div style="text-align: center;">
+                    <span>
+                        <img style="height: 40%;width: 40%;" src="/public/img/brain_puzzle.png" />
+                    </span>
+                </div>
+                <div style="text-align: center;">
+                    <span>
+                        <p class="only-mrgn" style="margin-top: 0;">
+                            <b>Mental Health</b> is all about your emotional and psychological
+                            well-being, your thoughts & personalities and how you deal with stress.
+                        </p>
+                    </span>
+                </div>
+                <div style="text-align: center;">
+                    <span>
+                        <p class="only-mrgn" style="margin-top: 0;">
+                            <b>Mental Health</b> is important at every stage of life, from childhood and adolescence
+                            through adulthood. Mental health problems are common but help is available. People
+                            with mental health problems can get better and may recover completely.
+                        </p>
+                    </span>
+                </div>
+                <div style="text-align: center;">
+                    <p class="only-mrgn">
+                        <b>Positive Mental Health</b> allows people to:
+                    <p class="only-mrgn">Realize their full potential</p>
+                    <p class="mrgn4">Cope with the stresses of life</p>
+                    <p class="mrgn4">Work productively</p>
+                    <p class="mrgn4">Make meaningful contributions to their communities</p>
+                    </p>
+                </div>
+                <div style="text-align: center;">
+                    <span>
+                        <p class="only-mrgn">
+                            <b>Mental Health Mapping by Jv-scan</b> is all about knowing your Emotional
+                            and Psychological Status both Positive and negative.
+                        </p>
+                    </span>
+                </div>
+
+                <div class="flex-container">
+                    <div class="flex-child">
+                        <span>
+                            <img style="width: 80%; height:90%;" src="/public/img/brain_ai.png" />
+                        </span>
+                    </div>
+                    <div class="flex-child" style="flex-basis: 130px;">
+                        <p class="only-mrgn">
+                            The <b>Unique Algorithm</b> we use at <b>Jv-scan</b> utilizes
+                            <b>04 Parameters</b> for <b>Mental Health Mapping</b>:
+                        </p>
+                        <div class="centre-align-text">
+                            <ol class="li-mrgn" style="text-align: center;">
+                                <li><b>Your Positive</b> Personality Traits</li>
+                                <li><b>Root Cause</b> Analysis</li>
+                                <li><b>Coping up</b> Mechanism</li>
+                                <li><b>7 Chakra</b> Mapping</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="pg7">
+            <br>
+            <div class="content">
+                <div style="text-align: center;">
+                    <span>
+                        <div style="width: 500px;display: inline-block;">
+                            <div style="background-color: #ebebeb;padding: 1px;width: 100%;">
+                                <p class="only-mrgn">
+                                <h3>YOUR POSITIVE PERSONALITY TRAITS</h3>
+                                </p>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <div style="text-align: center;">
+                    <span>
+                        <img style="height: 40%;width: 40%;" src="/public/img/ri_24.png" />
+                    </span>
+                </div>
+                <div style="text-align: center;">
+                    <span>
+                        <p class="only-mrgn">
+                            Positive qualities are personal attributes, character traits, skills, or strengths that
+                            are considered good or help us in some way. They are the measure of Love
+                            based emotions within the core of your existence.
+                            They bring Confidence, Clarity and Healing.
+                        </p>
+                        <p class="only-mrgn">
+                            It's important to know your positive attributes and keep them in mind to
+                            develop a healthy level of confidence and self-worth.
+                        </p>
+                        <% if (data.positive_traits_score) { %>
+                            <p class="only-mrgn">
+                                <b>
+                                    Here is a list of a few Positive Traits in your Personality as Scanned by
+                                    Our Unique AI Algorithm.
+                                </b>
+                            </p>
+                            <% } %>
+                    </span>
+                </div>
+                <% if (data.positive_traits_score) { %>
+                    <div class="flex-container">
+                        <div class="flex-child" style="background-color: #f5b4bf; ">
+                            <ul>
+                                <% for(var i=0; i<data.positive_traits.length; i++) { %>
+                                    <% if (i===3) break; %>
+                                        <li>
+                                            <%= data.positive_traits[i] %>
+                                        </li>
+                                        <% } %>
+                            </ul>
+                        </div>
+                        <div class="flex-child" style="background-color: #fcc440;margin-right: 20px;">
+                            <ul>
+                                <% for(var i=3; i<data.positive_traits.length; i++) { %>
+                                    <% if (i===6) break; %>
+                                        <li>
+                                            <%= data.positive_traits[i] %>
+                                        </li>
+                                        <% } %>
+                            </ul>
+                        </div>
+                        <div class="flex-child" style="background-color: #78cadc;">
+                            <ul>
+                                <% for(var i=6; i<data.positive_traits.length; i++) { %>
+                                    <% if (i===9) break; %>
+                                        <li>
+                                            <%= data.positive_traits[i] %>
+                                        </li>
+                                        <% } %>
+                            </ul>
+                        </div>
+                    </div>
+                    <% } else if (!data.positive_traits_score) { %>
+                        <div style="text-align: center;">
+                            <p class="only-mrgn">
+                                <b>Positive Personality Traits</b> are measured on the basis of <b>Normal
+                                    Frequencies</b> detected over
+                                Emotional Level. The absence of normal frequencies and the presence of Hyperactive
+                                frequencies in
+                                your Body mean that your Emotional Overload is more towards <b>Negative Emotions.</b>
+                            </p>
+                            <br>
+                            <p class="only-mrgn">
+                                <b>Dear <%= data.name %> you don't have any Positive Emotional Traits at the time of
+                                        Voice recording.
+                                </b>
+                            </p>
+                        </div>
+                        <% } %>
+                            <div style="text-align: center;">
+                                <span>
+                                    <div style="width: 95%;display: inline-block;">
+                                        <div
+                                            style="background: linear-gradient(to right, #ebebeb 0%, #ffffff 100%);padding: 1px;">
+                                            <span>
+                                                <p class="only-mrgn">
+                                                    Dear <b>
+                                                        <%= data.name %>
+                                                    </b> Based on your Current Voice Analysis your <b> Personality
+                                                        Traits
+                                                        Score
+                                                    </b>
+                                                    is
+                                                    <b>
+                                                        <%= data.positive_traits_score %>/1
+                                                    </b>
+                                                </p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </span>
+                            </div>
+                            <% if (!data.positive_traits_score) { %>
+                                <br>
+                                <br>
+                                <div style="text-align: center;">
+                                    <p class="only-mrgn"><b>There is Nothing to worry about. Your Recommendations are in
+                                            the Coming Pages
+                                            of this Report.</b></p>
+                                </div>
+                                <% } %>
+            </div>
+        </div>
+
+
+        <div class="pg8">
+            <br>
+            <div class="content">
+                <div style="text-align: center;">
+                    <span>
+                        <div style="width: 500px;display: inline-block;">
+                            <div style="background-color: #ebebeb;padding: 1px;width: 100%;">
+                                <p class="only-mrgn">
+                                <h3>ROOT CAUSE ANALYSIS</h3>
+                                </p>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <br>
+                <div class="flex-container">
+                    <div class="flex-child" style="flex: 0 0 100px;">
+                        <span>
+                            <img style="width: 275px; height: 225px;" src="/public/img/root_cause.png" />
+                        </span>
+                    </div>
+                    <div class="flex-child">
+                        <br>
+                        <br>
+                        <p class="only-mrgn">
+                            Addressing the <b>Root Cause of a Disease</b> is the most
+                            crucial step towards attaining <b>Disease Prevention</b>.
+                            This is because all diseases are born in the mind and
+                            further progress into the Body through various stages.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <p class="only-mrgn">
+                        <b>The Root cause</b> of any Disease is almost and invariably a very low vibratory Emotional
+                        state as measured over the <b>Human Vibratory Emotional Scale-The Trapped
+                            Emotions</b>
+                    </p>
+                </div>
+
+                <div>
+                    <p class="only-mrgn">
+                        <b>Trapped Emotions</b> therefore represent <b>Stage I</b>
+                        in the Progression of a diseases state.
+                        These are like <b>seeds which if allowed to grow</b>
+                        will sprout well and very quickly lead us into
+                        various forms of debility, un ease and finally
+                        Diseases.
+                    </p>
+                </div>
+
+                <div style="text-align: center;">
+                    <span>
+                        <div style="width: 95%;display: inline-block;">
+                            <div style="background: linear-gradient(to right, #ebebeb 80%, #ffffff 100%);padding: 1px;">
+                                <span>
+                                    <% if (data.root_cause_score===0) { %>
+                                        <p class="only-mrgn">
+                                            Here is a list of a few <b>Negative emotions</b> seated within the depths of
+                                            your Sub
+                                            conscious mind as Scanned by Our Unique AI Algorithm.
+                                        </p>
+                                        <% } else { %>
+                                            <p class="only-mrgn">
+                                                Dear <%= data.name %> you do not have <b>Negative/Trapped emotions</b>
+                                                    with in the depths of
+                                                    your Sub
+                                                    conscious mind as Scanned by Our Unique AI Algorithm.
+                                            </p>
+                                            <% } %>
+                                </span>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <br>
+                <% if (data.root_cause_score===0) { %>
+                    <div class="flex-container">
+                        <div class="flex-child" style="background-color: #f5b4bf;">
+                            <ul>
+                                <% for(var i=0; i<data.final_root_cause_issue_lst.length; i++) { %>
+                                    <% if (i===4) break; %>
+                                        <li>
+                                            <%= data.final_root_cause_issue_lst[i] %>
+                                        </li>
+                                        <% } %>
+                            </ul>
+
+                        </div>
+                        <div class="flex-child" style="background-color: #fcc440;margin-right: 20px;">
+                            <ul>
+                                <% for(var i=4; i<data.final_root_cause_issue_lst.length; i++) { %>
+                                    <% if (i===8) break; %>
+                                        <li>
+                                            <%= data.final_root_cause_issue_lst[i] %>
+                                        </li>
+                                        <% } %>
+                            </ul>
+
+                        </div>
+                        <div class="flex-child" style="background-color: #78cadc;">
+                            <ul>
+                                <% for(var i=8; i<data.final_root_cause_issue_lst.length; i++) { %>
+                                    <% if (i===12) break; %>
+                                        <li>
+                                            <%= data.final_root_cause_issue_lst[i] %>
+                                        </li>
+                                        <% } %>
+                            </ul>
+                        </div>
+                    </div>
+                    <% } else { %>
+                        <div style="text-align: center;">
+                            <p class="only-mrgn">
+                                <b>Root Cause analysis</b> is an indicator of presence of
+                                <b>weak or missing frequencies</b> detected over Emotional
+                                Level.
+                                The Absence of weak or missing frequencies in your
+                                Body mean that your Emotional overload is more
+                                towards <b>Positive emotions.</b>
+                            </p>
+                        </div>
+                        <% } %>
+                            <br>
+                            <div style="text-align: center;">
+                                <span>
+                                    <div style="width: 95%;display: inline-block;">
+                                        <div
+                                            style="background: linear-gradient(to right, #ebebeb 0%, #ffffff 100%);padding: 1px;">
+                                            <span>
+                                                <p class="only-mrgn">
+                                                    Dear <b>
+                                                        <%= data.name %>
+                                                    </b> Based on your Current Voice Analysis your <b>Root cause
+                                                        Analysis score is
+                                                        <% if (data.root_cause_score===0) { %>
+                                                            <b> 0/1</b>
+                                                            <% } else { %>
+                                                                <b> 1/1</b>
+                                                                <% } %>
+                                                    </b>
+                                                </p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </span>
+                            </div>
+            </div>
+        </div>
+
+
+        <div class="pg9">
+            <br>
+            <div class="content">
+                <div style="text-align: center;">
+                    <span>
+                        <div style="width: 500px;display: inline-block;">
+                            <div style="background-color: #ebebeb;padding: 1px;width: 100%;">
+                                <p class="only-mrgn">
+                                <h3>THE COPING UP MECHANISM</h3>
+                                </p>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <br>
+                <div class="flex-container">
+                    <div class="flex-child" style="flex: 0 0 100px;">
+                        <span>
+                            <img style="width: 275px; height: 225px;" src="/public/img/coping_up.png" />
+                        </span>
+                    </div>
+                    <div class="flex-child">
+                        <br>
+                        <p class="only-mrgn">
+                            Physiological balancing Mechanism at your Mind, Blood Body levels that
+                            aims to keep you Disease Free all Times. In other words it's a balance
+                            between the <b>Yin and Yang Energies</b>.
+                        </p>
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <span>
+                        <div style="width: 95%;display: inline-block;">
+                            <div style="background: linear-gradient(to right, #ebebeb 80%, #ffffff 100%);padding: 1px;">
+                                <span>
+                                    <p class="only-mrgn">
+                                        <b>Dear "<%= data.name %>"</b> based on your Current Voice Analysis your
+                                        <b>Coping up
+                                            mechanism is:</b>
+                                        <% if (data.active>=1) { %>
+                                            <b>Active.</b>
+                                            <% } else { %>
+                                                <b>Inactive.</b>
+                                                <% } %>
+                                    </p>
+                                </span>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <div style="text-align: center;">
+                    <% if (data.active>=1) { %>
+                        <p class="only-mrgn" style="margin-top: 0;">
+                            An Active Coping up mechanism means: your Immunity is good and trying to
+                            maintain a good Harmony at the quantum level to prevent you from falling sick.
+                        </p>
+                        <% } else { %>
+                            <p class="only-mrgn" style="margin-top: 0;">
+                                A inactive Coping up mechanism means: your Immunity is not good and
+                                it is not trying to maintain a good Harmony at the quantum level to
+                                prevent you from falling sick.
+
+                            </p>
+                            <% } %>
+                </div>
+                <div style="text-align: center;">
+                    <span>
+                        <div style="width: 500px;display: inline-block;">
+                            <div style="background-color: #ebebeb;padding: 1px;width: 100%;">
+                                <p class="only-mrgn">
+                                <h3>INTERPRETATION</h3>
+                                </p>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <div style="text-align: center;">
+                    <% if (data.active>=0) { %>
+                        <p class="only-mrgn" style="margin-bottom: 0;">
+                            Balancing of Yin-Yang not happening at all levels. Missing Frequencies
+                            are not being balanced by Hyperactive ones subconscious mind Dominance
+                            is the Rule and you will display more feminine or submissive or Low
+                            vibration emotions, which in your case are:
+                        </p>
+                        <% } else { %>
+                            <p class="only-mrgn">
+                                Balancing of Yin-Yang happening at all levels. Missing Frequencies
+                                are balanced by Hyperactive ones Conscious mind Dominance is the Rule
+                                and you will temporarily display more masculine or aggressive or High
+                                vibration emotions, which in your case are:
+                            </p>
+                            <% } %>
+                </div>
+                <br>
+                <div class="flex-container">
+                    <div class="flex-child" style="background-color: #f5b4bf;">
+                        <ul>
+                            <% for(var i=0; i<data.you_display.length; i++) { %>
+                                <% if (i===4) break; %>
+                                    <li>
+                                        <%= data.you_display[i] %>
+                                    </li>
+                                    <% } %>
+                        </ul>
+                    </div>
+                    <div class="flex-child" style="background-color: #fcc440;margin-right: 20px;">
+                        <ul>
+                            <% for(var i=4; i<data.you_display.length; i++) { %>
+                                <% if (i===8) break; %>
+                                    <li>
+                                        <%= data.you_display[i] %>
+                                    </li>
+                                    <% } %>
+                        </ul>
+                    </div>
+                    <div class="flex-child" style="background-color: #78cadc;">
+                        <ul>
+                            <% for(var i=8; i<data.you_display.length; i++) { %>
+                                <% if (i===12) break; %>
+                                    <li>
+                                        <%= data.you_display[i] %>
+                                    </li>
+                                    <% } %>
+                        </ul>
+                    </div>
+                </div>
+                <br>
+                <div style="text-align: center;">
+                    <span>
+                        <div style="width: 95%;display: inline-block;">
+                            <div style="background: linear-gradient(to right, #ebebeb 0%, #ffffff 100%);padding: 1px;">
+                                <span>
+                                    <p class="only-mrgn">
+                                        Dear <%= data.name %> Based on your Current Voice Analysis your <b>Coping up
+                                                Mechanism
+                                                score is</b>
+                                            <% if (data.active>=1) { %>
+                                                <b> 1/1</b>
+                                                <% } else { %>
+                                                    <b> 0/1</b>
+                                                    <% } %>
+                                    </p>
+                                </span>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="pg10">
+            <br>
+            <div class="content">
+                <div style="text-align: center;">
+                    <span>
+                        <div style="width: 500px;display: inline-block;">
+                            <div style="background-color: #ebebeb;padding: 1px;width: 100%;">
+                                <p class="only-mrgn">
+                                <h3>THE SEVEN CHAKRA SCORE</h3>
+                                </p>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <br>
+                <div class="flex-container">
+                    <div class="flex-child" style="flex: 0 0 100px;">
+                        <span>
+                            <img style="width: 275px; height: 225px;" src="/public/img/chakras.png" />
+                        </span>
+                    </div>
+                    <div class="flex-child">
+                        <p class="only-mrgn">
+                            <b>Chakras are 7 circular vortexes of energy</b> starting from your tail bone,
+                            and ending at the crown of your head. They are the focal points of your
+                            life force, or prana and their individual states are vital to your holistic well-being.
+                        </p>
+                        <p class="only-mrgn">
+                            This unique Scoring Algorithm tells us about the Energy Blocks at the
+                            Chakra level & may be preventing you from leading a Stress Free life.
+                        </p>
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <span>
+                        <p class="only-mrgn">
+                            <b>Here is a list of the overall activity and scoring of your individual
+                                Chakra as Scanned by Our Unique AI Algorithm.</b>
+                        </p>
+                    </span>
+                </div>
+                <div style="text-align: center;">
+                    <span>
+                        <img style="width:500px;" src="/public/charts/<%= data.chakra_chart %>" />
+                    </span>
+                </div>
+                <div style="text-align: center;">
+                    <span>
+                        <div style="width: 95%;display: inline-block;">
+                            <div style="background: linear-gradient(to right, #ebebeb 80%, #ffffff 100%);padding: 1px;">
+                                <span>
+                                    <p class="only-mrgn">
+                                        Dear <%= data.name %> Based on your Current Voice Analysis your <b>Chakra Score
+                                                is <%= data.chakra_score %>/7</b>.
+                                    </p>
+                                </span>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </div>
+            <br>
+        </div>
+
+        <div id="interpretation-seven_chakra" class="pg10">
+            <br>
+            <div class="content">
+                <div style="text-align: center;">
+                    <span>
+                        <div style="width: 500px;display: inline-block;">
+                            <div style="background-color: #ebebeb;padding: 1px;width: 100%;">
+                                <p class="only-mrgn">
+                                <h3>INTERPRETATION-THE SEVEN CHAKRA</h3>
+                                </p>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+
+                <div style="text-align: center;">
+                    <span>
+                        <p class="only-mrgn">
+                            <b>Here is a list of the overall activity and scoring of your individual
+                                Chakra as Scanned by Our Unique AI Algorithm.</b>
+                        </p>
+                    </span>
+                </div>
+
+                <div style="text-align: center;">
+                    <span>
+                        <img style="width:400px;" src="/public/charts/<%= data.chakra_chart %>" />
+                    </span>
+                </div>
+
+                <div style="text-align: center;">
+                    <span>
+                        <div style="width: 95%;display: inline-block;">
+                            <div style="background: linear-gradient(to right, #ebebeb 80%, #ffffff 100%);padding: 1px;">
+                                <span>
+                                    <p class="only-mrgn">
+                                        Dear <%= data.name %> Based on your Current Voice Analysis your <b>Chakra Score
+                                                is <%= data.chakra_score %>/7</b>.
+                                    </p>
+                                </span>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+
+                <div style="max-width: 600px; width: 100%; margin: 0 auto; text-align: center;">
+
+                    <% if(data.normal_chakra_count> 0) { %>
+                        <div class="normal_chakra" style="margin-bottom: 10px;">
+                            <h4
+                                style="display: inline-block; background-color: #ebebeb; padding: 8px; margin: 0 auto; margin-bottom: 5px;">
+                                NORMAL CHAKRAS</h4>
+
+                            <% for(let i=0;i<data.chakra_status_data.length;i++) {%>
+                                <% if (data.chakra_status_data[i]?.vibration !=="Normal" ) continue; %>
+                                    <p style="margin: 0px;">
+                                        <%= data.chakra_status_data[i]?.element %>
+                                    </p>
+                                    <% } %>
+                        </div>
+                        <% } %>
+
+                            <% if(data.missing_chakra_count> 0) { %>
+                                <div class="normal_chakra" style="margin-bottom: 10px;">
+                                    <h4
+                                        style="display: inline-block; background-color: #ebebeb; padding: 8px; margin: 0 auto; margin-bottom: 5px;">
+                                        MISSING CHAKRAS</h4>
+
+                                    <% for(let i=0;i<data.chakra_status_data.length;i++) {%>
+                                        <% if (data.chakra_status_data[i]?.vibration !=="Missing" ) continue; %>
+                                            <p style="margin: 0px;">
+                                                <%= data.chakra_status_data[i]?.element %>
+                                            </p>
+                                            <% } %>
+                                </div>
+                                <% } %>
+
+                                    <% if(data.underfunctioning_chakra_count> 0) { %>
+                                        <div class="weak_chakra" style="margin-bottom: 10px;">
+                                            <h4
+                                                style="display: inline-block; background-color: #ebebeb; padding: 8px; margin: 0 auto; margin-bottom: 5px;">
+                                                WEAK CHAKRAS</h4>
+
+                                            <% for(let i=0; i<data.chakra_status_data.length; i++) {%>
+                                                <% if (data.chakra_status_data[i]?.vibration !=="Low" ) continue; %>
+                                                    <p style="margin: 0px; font-size: medium;">
+                                                        <%= data.chakra_status_data[i]?.element %>
+                                                    </p>
+                                                    <% } %>
+                                        </div>
+                                        <% } %>
+
+                                            <% if(data.overfunctioning_chakra_count> 0) { %>
+                                                <div class="hyper_chakra" style="margin-bottom: 12px;">
+                                                    <h4
+                                                        style="display: inline-block; background-color: #ebebeb; padding: 8px; margin: 0 auto; margin-bottom: 5px;">
+                                                        HYPERACTIVE CHAKRAS</h4>
+
+                                                    <% for(let i=0;i<data.chakra_status_data.length;i++) {%>
+                                                        <% if (data.chakra_status_data[i]?.vibration !=="Hyperactive" )
+                                                            continue; %>
+                                                            <p style="margin: 0px; font-size: medium;">
+                                                                <%= data.chakra_status_data[i]?.element %>
+                                                            </p>
+                                                            <% } %>
+                                                </div>
+                                                <% } %>
+                </div>
+
+                <% if (data.chakra_recommendations.length !==0) {%>
+                    <div style="text-align: center; max-width: 600px; width: 100%; margin: 0 auto;">
+                        <div>
+                            <p style="margin-bottom: 8px; font-weight: 600;">You must balance these chakra's using:</p>
+
+                            <% for(let i=0; i<data.chakra_recommendations.length; i++) {%>
+                                <p style="margin: 0px; font-size: medium; font-weight: 500;">
+                                    <%= data.chakra_recommendations[i] %>
+                                </p>
+                                <% } %>
+                        </div>
+                    </div>
+                    <% } %>
+            </div>
+            <br>
+        </div>
+
+        <div class="pg11" style="width: 100%;">
+            <br>
+            <br>
+            <div class="content" style="max-width: 650px; width: 100%; margin-left: auto; margin-right: auto;">
+                <div style="text-align: center; margin-top: 1em ">
+                    <div style="width: 500px;display: inline-block;">
+                        <div style="background-color: #ebebeb;padding: 1px;width: 100%;">
+                            <p class="only-mrgn">
+                            <h3>END OF VOICE ANALYSIS REPORT</h3>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center;">
+                    <p class="only-mrgn">
+                        Dear
+                        <b>
+                            <%= data.name %>
+                        </b>
+                        Jv-scan Wishes you and your Family a Very Good Health Always
+                    </p>
+                </div>
+
+                <div style="text-align: center; margin-top: 1em ">
+                    <div style="width: 500px;display: inline-block;">
+                        <div style="background-color: #ebebeb;padding: 1px;width: 100%;">
+                            <p class="only-mrgn">
+                            <h3>DISCLAIMER</h3>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center;">
+                    <p class="only-margin">
+                        This information and advice published or made available through www.jvscan.com is not intended
+                        to
+                        replace the services of a physician, nor does it constitute a doctor-patient relationship.
+                    </p>
+                </div>
+
+                <div style="text-align: center;">
+                    <p class="only-margin">
+                        Information on this website is provided for informational purposes only and is not a substitute
+                        for
+                        professional medical advice. You should not use the information on this website for diagnosing
+                        or
+                        treating a medical or health condition.
+                    </p>
+                </div>
+
+                <div style="text-align: center;">
+                    <p class="only-margin">
+                        You should consult a physician in all matters relating to your health, and particularly in
+                        respect
+                        to any symptoms that may require diagnosis or medical attention. Any action on your part in
+                        response
+                        to the information provided in this website is at the reader's/client's
+                        discretion.
+                    </p>
+                </div>
+
+                <div style="text-align: center;">
+                    <p class="only-margin">
+                        Readers/Clients should consult their own physicians
+                        concerning the information on this website.
+                        <br />
+                        <b>Jvscan Private Limited</b> makes no representations or warranties with respect to any
+                        information
+                        offered or provided on or through
+                        <a href="http://www.jvscan.com" style="font-weight: bolder;">www.jvscan.com</a> regarding
+                        treatment,
+                        action, or application of medication.
+                    </p>
+                </div>
+
+                <div style="text-align: center;">
+                    <p>
+                        <b>Jvscan Private Limited</b> is not liable for any direct or indirect claim, loss or damage
+                        resulting from
+                        use of this website and/or any website(s) linked to/from it.
+                    </p>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
