@@ -20,8 +20,7 @@ Health Frequency Analyzer is a full-stack application designed to analyze audio 
 **Backend:** Node.js, Express.js  
 **Scripting & Analysis:** Python (NumPy, SciPy)  
 **PDF Generation:** Puppeteer, pdfkit  
-**Audio Processing:** ffmpeg, Web Audio API  
-**Frontend:** HTML, CSS, JavaScript (basic UI or Postman-supported API usage)
+**Audio Processing:** ffmpeg, Web Audio API 
 
 ---
 
